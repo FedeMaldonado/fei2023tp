@@ -14,7 +14,17 @@ services:
       DB_HOST: db
     ports:
       - "8000:80"
-      
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: federicopili@hotmail.com
+      PGADMIN_DEFAULT_PASSWORD: 123455
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin:delegated
+    ports:
+      - "8001:80"
+          
   db:
           image: postgres:14-alpine
           environment:
