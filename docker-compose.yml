@@ -2,6 +2,19 @@ version: '3.1'
 
 services:
 
+  app:
+    image: yiisoftware/yii2-php:8.1-apache
+    volumes:
+      - ./backend/composer/cache:/root/.composer/cache:delegated
+      - ./backend/basic:/app:delegated
+    environment:
+      DB_DATABASE: pwa
+      DB_PASSWORD: pwakey
+      DB_USER: pwauser
+      DB_HOST: db
+    ports:
+      - "8000:80"
+      
   db:
           image: postgres:14-alpine
           environment:
