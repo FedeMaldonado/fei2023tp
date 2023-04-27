@@ -50,6 +50,11 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'pluralize' => false,
+                    'controller' => ['apiv1/carrera','apiv1/profesor','apiv1/materia','apiv1/aula','apiv1/reserva_aula','apiv1/horario_materia'],
+                ]
             ],
         ],
         
