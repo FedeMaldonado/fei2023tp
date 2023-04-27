@@ -9,5 +9,5 @@ use yii\rest\ActiveController;
  */
 class Horario_materiaController extends ActiveController
 {
-    public $modelClass='app\models\HorarioMateria';
+    public $modelClass='app\modules\apiv1\models\Horario_materia';
 }

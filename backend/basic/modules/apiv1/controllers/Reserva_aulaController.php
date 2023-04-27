@@ -9,5 +9,5 @@ use yii\rest\ActiveController;
  */
 class Reserva_aulaController extends ActiveController
 {
-    public $modelClass='app\models\ReservaAula';
+    public $modelClass='app\modules\apiv1\models\Reserva_aula';
 }
